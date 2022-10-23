@@ -1,0 +1,13 @@
+.note-4 {
+    min-width: 4rem;
+    width: 4rem;
+    max-height: 1rem;
+    display: flex;
+}
+
+.note-3 {
+    min-width: 3rem;
+    width: 3rem;
+    max-height: 1rem;
+    display: flex;
+}

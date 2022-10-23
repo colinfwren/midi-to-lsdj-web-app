@@ -1,3 +1,10 @@
+:root {
+  --colour-1: #9bbc0f;
+  --colour-2: #8bac0f;
+  --colour-3: #306230;
+  --colour-4: #0f380f;
+}
+
 html,
 body {
   padding: 0;
@@ -5,6 +12,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+@font-face {
+  font-family: LSDJ;
+  src: url(./fonts/C64.woff);
+}
+
+body {
+  margin: 0;
+  font-family: LSDJ;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--colour-1);
+  color: var(--colour-4);
+}
+
 
 a {
   color: inherit;
@@ -20,7 +43,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--colour-1);
+    background: var(--colour-4);
   }
 }

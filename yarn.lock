@@ -1233,10 +1233,10 @@ midi-file@^1.2.3:
   resolved "https://registry.yarnpkg.com/midi-file/-/midi-file-1.2.3.tgz#020c48c96e96ac39c5c23abd8874065dc9959395"
   integrity sha512-JsOv9cajkVkR1gbL9Jvplz6X4lPuyVfcci0kSLzXZ2WKs7TJF72m9U5rmp45/H/1As+96dXY8xgvNLiIfGOU4w==
 
-midi-to-lsdj@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/midi-to-lsdj/-/midi-to-lsdj-1.0.1.tgz#286132e831028ac4ee492514354bdb324c705d76"
-  integrity sha512-qSd7iw7FqEJOR+mfU5/tm3OEtuSdbMDYGCsD2J3qPSRyNy5tJmlRkxzj82/KBjVxWRXqFRpzmNaDRaZSy0Rfog==
+midi-to-lsdj@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/midi-to-lsdj/-/midi-to-lsdj-1.0.3.tgz#81ba368ccf69f4645be0ad39d5695ec046ea9faf"
+  integrity sha512-rMGgTi8V9mDwBGIIYgAYW8cLj0fhVJPIY90KAK3xRCXvbq6PstNnR7Qq+zEyb/PcxlrF+VFiSZ/3H5YoTStYzg==
   dependencies:
     midi-file "^1.2.3"
     typescript "^4.8.4"

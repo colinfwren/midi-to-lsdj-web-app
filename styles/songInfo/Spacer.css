@@ -1,0 +1,13 @@
+.spacer {
+    width: 3rem;
+    padding-left: 2rem;
+    height: 1rem;
+    display: block;
+}
+
+.spacer .blank {
+    min-width: 3rem;
+    width: 3rem;
+    height: 1rem;
+    background-color: var(--colour-2);
+}

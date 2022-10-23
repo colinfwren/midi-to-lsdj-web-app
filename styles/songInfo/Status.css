@@ -1,0 +1,6 @@
+.status {
+    height: 10rem;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+}

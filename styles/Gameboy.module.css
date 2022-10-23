@@ -1,0 +1,7 @@
+.gameboy {
+    width: 20rem;
+    height: 18rem;
+    background-color: var(--colour-1);
+    display: flex;
+    margin: 1rem;
+}

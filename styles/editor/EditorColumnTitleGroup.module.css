@@ -1,0 +1,15 @@
+.editor-column-title-group-2 {
+    min-width: 13rem;
+    width: 13rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.editor-column-title-group-3 {
+    min-width: 12rem;
+    width: 12rem;
+    padding-left: 3rem;
+    display: flex;
+    flex-direction: row;
+}

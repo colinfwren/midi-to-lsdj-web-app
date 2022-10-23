@@ -1,0 +1,8 @@
+.screenGroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section h1 {
+    padding-left: 1rem;
+}
