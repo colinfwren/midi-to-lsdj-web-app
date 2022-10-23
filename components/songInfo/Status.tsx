@@ -1,11 +1,11 @@
 import ActiveInstrument from "./ActiveInstrument";
 import ChannelActivity from "./ChannelActivity";
 import Spacer from "./Spacer";
-import '../../styles/songInfo/Status.css'
+import styles from '../../styles/songInfo/Status.module.css'
 
 function Status({tempo}) {
   return (
-    <div className="status">
+    <div className={styles.status}>
       <ActiveInstrument />
       <Spacer/>
       <Spacer/>

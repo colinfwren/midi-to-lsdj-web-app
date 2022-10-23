@@ -1,4 +1,4 @@
-import '../../styles/editor/Note.css';
+import '../../styles/editor/Note.module.css';
 
 function Note({value, width = 4}) {
   if (typeof (value) !== 'string'){

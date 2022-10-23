@@ -3,7 +3,7 @@ import Editor from "../Editor";
 import Chain from "../Chain";
 import SongInfo from "../SongInfo";
 import { convertToHex } from "../utils";
-import "../../styles/section.css";
+import "../../styles/section.module.css";
 
 function ChainHOC({data}) {
   const chains = data.chains.map((chain, chainIndex) => {

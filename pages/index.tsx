@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AppContext from "../contexts/AppContext";
 import { UploadForm } from "../components/UploadForm";
+import SongScreen from "../components/screens/SongScreen";
 
 export default function Home() {
   const { data } = useContext(AppContext)
@@ -24,9 +25,9 @@ export default function Home() {
             <li>Only the first channel in the MIDI file will be processed and that channel will be assigned to PU1 if
               it's found to be monophonic
             </li>
-            <li>If the name of the file has the word "drum" in then it'll be assumed it's a drum track and it'll be
-              polyphonic wave based drums
-            </li>
+            {/*<li>If the name of the file has the word "drum" in then it'll be assumed it's a drum track and it'll be*/}
+            {/*  polyphonic wave based drums*/}
+            {/*</li>*/}
             <li>The note resolution is currently capped to semi-quavers (16th notes)</li>
             <li>Only non-common time signatures are handled currently</li>
             <li>The song isn't stored, so you'll need to re-upload</li>
@@ -35,5 +36,18 @@ export default function Home() {
       </div>
     )
   }
-  return (<h1>Uploaded</h1>)
+  return (
+    <div className="App">
+      <section>
+        <h1>Phrases</h1>
+      </section>
+      <section>
+        <h1>Chains</h1>
+      </section>
+      <section>
+        <h1>Song</h1>
+        <SongScreen data={data} />
+      </section>
+    </div>
+  )
 }

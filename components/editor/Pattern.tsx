@@ -1,7 +1,7 @@
-import '../../styles/editor/Pattern.css';
+import styles from '../../styles/editor/Pattern.module.css';
 
 function Pattern({value}) {
-  return <div className="pattern">{value}</div>
+  return <div className={styles.pattern}>{value}</div>
 }
 
 export default Pattern;

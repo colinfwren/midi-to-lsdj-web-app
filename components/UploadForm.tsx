@@ -28,7 +28,7 @@ const fetchingError = (resetError) => (
 
 
 export function UploadForm() {
-  const { isLoading } = useContext(AppContext)
+  const { setData, isLoading } = useContext(AppContext)
   const [selectedFile, setSelectedFile] = useState(null)
   const [fetchError, setFetchError] = useState(false)
 
@@ -40,9 +40,17 @@ export function UploadForm() {
     setSelectedFile(event.target.files[0])
   }
 
-  function handleSubmit(event) {
-    // code to send file
+  async function handleSubmit(event) {
     event.preventDefault()
+    const formData = new FormData()
+    formData.append('file', selectedFile)
+    const options = {
+      method: 'POST',
+      body: formData
+    }
+    const response = await fetch('/api/transcribe', options)
+    const data = await response.json()
+    setData(data)
   }
 
   const baseRows = Array(6).fill(['(EMPTY)', 0]);
@@ -72,7 +80,7 @@ export function UploadForm() {
         <div className="title-spacer" />
         {rows}
         <div className="title-spacer" />
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="POST" encType="multipart/form-data">
           <div className="file-select-wrapper">
             <div className="file-select-btn">
               <EditorRowNumber index="[]" />

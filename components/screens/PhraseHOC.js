@@ -3,7 +3,7 @@ import Editor from "../Editor";
 import Phrase from "../Phrase";
 import SongInfo from "../SongInfo";
 import { convertToHex } from "../utils";
-import "../../styles/section.css";
+import "../../styles/section.module.css";
 
 function PhraseHOC({data}) {
   const isDrums = data.song.wav.length > 0;

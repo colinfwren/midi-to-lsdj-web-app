@@ -3,26 +3,28 @@ import Editor from "../Editor";
 import Song from "../Song";
 import SongInfo from "../SongInfo";
 import { LSDJTrack } from '../../types'
+import { getChunksOfSize } from "midi-to-lsdj/dist/utils";
 
-type SongHOCProps = {
+type SongScreenProps = {
   data: LSDJTrack
 }
 
-export default function SongHOC({ data }) {
-  const screenData = chunks.map(item => {
+export default function SongScreen({ data }: SongScreenProps) {
+  const screenData = data.chains.map(item => {
     return {
-      'pu1': isPu1 ? item : [],
+      'pu1': item.key,
       'pu2': [],
-      'wav': !isPu1 ? item : [],
+      'wav': [],
       'noi': []
     };
   });
-  const screens = screenData.map((songChunk, index) => (
+  const chunks = getChunksOfSize(screenData, 16)
+  const screens = chunks.map((songChunk, index) => (
     <Gameboy key={index}>
       <Editor>
         <Song data={songChunk} key={index} offset={index}/>
       </Editor>
-      <SongInfo tempo={data.tempo} section="S" />
+      <SongInfo tempo={120} section="S" />
     </Gameboy>
   ));
   return <div className="screenGroup">{screens}</div>;

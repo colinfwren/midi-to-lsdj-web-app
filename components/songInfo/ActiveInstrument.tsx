@@ -1,4 +1,4 @@
-import '../../styles/songInfo/ActiveInstrument.css';
+import '../../styles/songInfo/ActiveInstrument.module.css'
 
 type ActiveInstrumentProps = {
   children?: JSX.Element

@@ -1,4 +1,4 @@
-import '../../styles/songInfo/ChannelActivity.css';
+import '../../styles/songInfo/ChannelActivity.module.css'
 
 type ChannelActivityProps = {
   title: string

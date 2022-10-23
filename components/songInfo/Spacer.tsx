@@ -1,4 +1,4 @@
-import '../../styles/songInfo/Spacer.css'
+import '../../styles/songInfo/Spacer.module.css'
 
 function Spacer() {
   return (

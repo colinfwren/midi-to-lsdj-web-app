@@ -65,3 +65,10 @@ export interface AppContext extends AppState {
     setData: Dispatch<null | LSDJTrack>,
     setIsLoading: Dispatch<boolean>
 }
+
+export interface LSDJChannels {
+    pu1: string
+    pu2: []
+    wav: []
+    noi: []
+}
