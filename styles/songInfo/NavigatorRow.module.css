@@ -2,8 +2,8 @@
     min-width: 5rem;
     width: 5rem;
     height: 1rem;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .navigator-row.active {
@@ -25,4 +25,21 @@
     width: 1rem;
     height: 1rem;
     line-height: 1rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .navigator-row.active {
+    background-color: var(--colour-1);
+    color: var(--colour-4);
+}
+
+.navigator-row.active .navigator-row-active {
+    background-color: var(--colour-3);
+    color: var(--colour-1);
+}
+
+.navigator-row .navigator-row-inactive {
+    color: var(--colour-3);
+}
 }

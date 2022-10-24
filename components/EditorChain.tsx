@@ -3,7 +3,7 @@ import EditorColumnTitleGroup from "./editor/EditorColumnTitleGroup";
 import EditorColumnTitle from "./editor/EditorColumnTitle";
 import Pattern from "./editor/Pattern";
 import Transpose from "./editor/Transpose";
-import {convertToHex} from "./utils";
+import { convertToHex } from 'midi-to-lsdj/dist/utils';
 import { LSDJChain } from "../types";
 
 type EditorChainProps = {

@@ -2,7 +2,7 @@ import Gameboy from "../Gameboy";
 import Editor from "../Editor";
 import Phrase from "../Phrase";
 import SongInfo from "../SongInfo";
-import { convertToHex } from "../utils";
+import { convertToHex } from 'midi-to-lsdj/dist/utils';
 import "../../styles/section.module.css";
 
 function PhraseHOC({data}) {

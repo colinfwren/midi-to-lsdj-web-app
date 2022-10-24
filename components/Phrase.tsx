@@ -1,6 +1,6 @@
 import EditorPhrase from "./EditorPhrase";
 import Title from "./Title";
-import {convertToHex} from "./utils";
+import { convertToHex } from 'midi-to-lsdj/dist/utils';
 
 
 function Phrase({phrase, phraseKey, isDrums = false}) {

@@ -1,5 +1,6 @@
 import NavigatorRow from "./NavigatorRow";
 import styles from '../../styles/songInfo/Navigator.module.css';
+import '../../styles/songInfo/NavigatorRow.module.css'
 
 
 function Navigator({section}) {

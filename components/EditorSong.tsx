@@ -2,8 +2,8 @@ import EditorRow from "./editor/EditorRow";
 import EditorColumnTitleGroup from "./editor/EditorColumnTitleGroup";
 import EditorColumnTitle from "./editor/EditorColumnTitle";
 import Pattern from "./editor/Pattern";
-import { convertToHex } from "./utils";
-import '../styles/editor/EditorSong.module.css'
+import { convertToHex } from 'midi-to-lsdj/dist/utils';
+import styles from '../styles/editor/EditorSong.module.css'
 import { LSDJChannels} from "../types";
 
 type EditorSongProps = {
@@ -35,6 +35,7 @@ function EditorSong({ data, offset}: EditorSongProps) {
   });
   const columns = (
     <EditorColumnTitleGroup key="2" offset={3}>
+      <div />
       <EditorColumnTitle title="PU1" width={3} />
       <EditorColumnTitle title="PU2" width={3} />
       <EditorColumnTitle title="WAV" width={3} />
@@ -43,8 +44,8 @@ function EditorSong({ data, offset}: EditorSongProps) {
   );
   return (
     <>
-      {columns},
-      <div className="editor-phrases" key="1">{notes}</div>
+      {columns}
+      <div className={styles['editor-phrases']} key="1">{notes}</div>
     </>
   )
 }

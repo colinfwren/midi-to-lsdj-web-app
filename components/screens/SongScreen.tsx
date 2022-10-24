@@ -4,6 +4,7 @@ import Song from "../Song";
 import SongInfo from "../SongInfo";
 import { LSDJTrack } from '../../types'
 import { getChunksOfSize } from "midi-to-lsdj/dist/utils";
+import styles from '../../styles/section.module.css'
 
 type SongScreenProps = {
   data: LSDJTrack
@@ -27,5 +28,5 @@ export default function SongScreen({ data }: SongScreenProps) {
       <SongInfo tempo={120} section="S" />
     </Gameboy>
   ));
-  return <div className="screenGroup">{screens}</div>;
+  return <div className={styles.screenGroup}>{screens}</div>;
 }

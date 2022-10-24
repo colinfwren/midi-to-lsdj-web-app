@@ -1,4 +1,4 @@
-import '../../styles/songInfo/ChannelActivity.module.css'
+import styles from '../../styles/songInfo/ChannelActivity.module.css'
 
 type ChannelActivityProps = {
   title: string
@@ -7,9 +7,9 @@ type ChannelActivityProps = {
 
 function ChannelActivity({ title, value }: ChannelActivityProps) {
   return (
-    <div className="channel-activity">
-      <div className="label">{title}</div>
-      <div className="value">{value}</div>
+    <div className={styles['channel-activity']}>
+      <div>{title}</div>
+      <div className={styles.value}>{value}</div>
     </div>
   )
 }

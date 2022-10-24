@@ -4,7 +4,7 @@ import Title from "./Title";
 import Editor from "./Editor";
 import "../styles/UploadForm.module.css";
 import EditorRow from "./editor/EditorRow";
-import {convertToHex} from "./utils";
+import { convertToHex } from 'midi-to-lsdj/dist/utils';
 import EditorRowNumber from "./editor/EditorRowNumber";
 import AppContext from "../contexts/AppContext";
 

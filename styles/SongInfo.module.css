@@ -1,7 +1,6 @@
 .songInfo {
     min-width: 5rem;
     width: 5rem;
-    flex: 5 5rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 3rem;
 }

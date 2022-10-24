@@ -1,6 +1,6 @@
 .editor-row {
     min-width: 15rem;
     width: 15rem;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 3rem 1fr 1fr 1fr 1fr;
 }

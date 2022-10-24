@@ -1,6 +1,6 @@
 import EditorChain from "./EditorChain";
 import Title from "./Title";
-import {convertToHex} from "./utils";
+import { convertToHex } from 'midi-to-lsdj/dist/utils';
 import { LSDJChain } from "../types";
 
 type ChainProps = {

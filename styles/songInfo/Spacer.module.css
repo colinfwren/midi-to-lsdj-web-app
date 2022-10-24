@@ -11,3 +11,9 @@
     height: 1rem;
     background-color: var(--colour-2);
 }
+
+@media (prefers-color-scheme: dark) {
+  .spacer .blank {
+      background-color: var(--colour-3);
+  }
+}
