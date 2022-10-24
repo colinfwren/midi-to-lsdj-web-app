@@ -42,15 +42,24 @@ export function UploadForm() {
 
   async function handleSubmit(event) {
     event.preventDefault()
+    setFetchError(false)
     const formData = new FormData()
     formData.append('file', selectedFile)
     const options = {
       method: 'POST',
       body: formData
     }
-    const response = await fetch('/api/transcribe', options)
-    const data = await response.json()
-    setData(data)
+    try {
+      const response = await fetch('/api/transcribe', options)
+      const data = await response.json()
+      if (data.status === 'fail') {
+        setFetchError(true)
+      } else {
+        setData(data)
+      }
+    } catch (error) {
+      setFetchError(true)
+    }
   }
 
   const baseRows = Array(6).fill(['(EMPTY)', 0]);

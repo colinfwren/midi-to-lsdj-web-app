@@ -4,6 +4,7 @@ import { UploadForm } from "../components/UploadForm";
 import SongScreen from "../components/screens/SongScreen";
 import ChainScreen from '../components/screens/ChainScreen'
 import PhraseScreen from "../components/screens/PhraseScreen";
+import TableScreen from "../components/screens/TableScreen";
 
 export default function Home() {
   const { data } = useContext(AppContext)
@@ -37,6 +38,10 @@ export default function Home() {
   }
   return (
     <div className="App">
+      <section>
+        <h1>Tables</h1>
+        <TableScreen data={data} />
+      </section>
       <section>
         <h1>Phrases</h1>
         <PhraseScreen data={data} />
