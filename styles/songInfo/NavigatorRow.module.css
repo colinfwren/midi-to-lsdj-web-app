@@ -1,0 +1,45 @@
+.navigator-row {
+    min-width: 5rem;
+    width: 5rem;
+    height: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.navigator-row.active {
+    background-color: var(--colour-4);
+    color: var(--colour-1);
+}
+
+.navigator-row.active .navigator-row-active {
+    background-color: var(--colour-2);
+    color: var(--colour-4);
+}
+
+.navigator-row .navigator-row-inactive {
+    color: var(--colour-2);
+}
+
+.navigator-row .navigator-row-active,
+.navigator-row .navigator-row-inactive {
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .navigator-row.active {
+    background-color: var(--colour-1);
+    color: var(--colour-4);
+}
+
+.navigator-row.active .navigator-row-active {
+    background-color: var(--colour-3);
+    color: var(--colour-1);
+}
+
+.navigator-row .navigator-row-inactive {
+    color: var(--colour-3);
+}
+}

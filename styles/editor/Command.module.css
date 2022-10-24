@@ -1,0 +1,28 @@
+.commandGroup4 {
+    min-width: 4rem;
+    width: 4rem;
+    max-height: 1rem;
+    display: flex;
+}
+
+.commandGroup3 {
+    min-width: 3rem;
+    width: 3rem;
+    max-height: 1rem;
+    display: flex;
+}
+
+.command {
+    width: 1rem;
+    background-color: var(--colour-2);
+}
+
+.value {
+    width: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    .command {
+        background-color: var(--colour-3);
+    }
+}

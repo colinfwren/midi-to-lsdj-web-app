@@ -1,0 +1,14 @@
+.gameboy {
+    width: 20rem;
+    height: 21rem;
+    background-color: var(--colour-1);
+    display: grid;
+    grid-template-columns: 15rem 5rem;
+    margin: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gameboy {
+      background-color: var(--colour-4);
+  }
+}

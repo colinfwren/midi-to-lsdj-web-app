@@ -1,0 +1,7 @@
+.editor {
+    min-width: 15rem;
+    width: 15rem;
+    flex: 15 15rem;
+    display: flex;
+    flex-direction: column;
+}

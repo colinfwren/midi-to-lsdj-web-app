@@ -1,0 +1,15 @@
+.editor-column-title-4 {
+    min-width: 4rem;
+    width: 4rem;
+    font-size: 0.6rem;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+.editor-column-title-3 {
+    min-width: 3rem;
+    width: 3rem;
+    font-size: 0.6rem;
+    height: 1rem;
+    line-height: 1rem;
+}

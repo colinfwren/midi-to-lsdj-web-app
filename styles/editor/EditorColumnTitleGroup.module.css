@@ -1,0 +1,13 @@
+.editor-column-title-group-2 {
+    min-width: 13rem;
+    width: 13rem;
+    display: grid;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr;
+}
+
+.editor-column-title-group-3 {
+    min-width: 12rem;
+    width: 12rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr 1fr 1fr 1fr;
+}

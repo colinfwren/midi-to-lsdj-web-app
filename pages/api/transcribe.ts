@@ -25,7 +25,7 @@ export default async function handler(req, res) {
       if (typeof formData.files.file !== 'undefined' && !Array.isArray(formData.files.file)) {
         const midiData = readMidiFile(formData.files.file.filepath)
         const trackData = processTrack(midiData.tracks[0], midiData.header.ticksPerBeat)
-        res.status(200).json(JSON.stringify(trackData))
+        res.status(200).json(trackData)
       }
     } catch (error) {
       console.error('Failed to process file', error)

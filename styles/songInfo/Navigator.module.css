@@ -1,0 +1,13 @@
+.navigator {
+    background-color: var(--colour-2);
+    width: 5rem;
+    height: 3rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navigator {
+      background-color: var(--colour-3);
+  }
+}

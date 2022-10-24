@@ -1,0 +1,7 @@
+.pattern {
+    min-width: 3rem;
+    width: 3rem;
+    max-height: 1rem;
+    display: flex;
+}
+

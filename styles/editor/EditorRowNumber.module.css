@@ -1,0 +1,30 @@
+.editor-row-number {
+    min-width: 2rem;
+    width: 2rem;
+    max-height: 1rem;
+    display: flex;
+}
+
+.editor-row-number-value {
+    width: 1rem;
+    background-color: var(--colour-2);
+}
+
+.editor-row-number.wide {
+    min-width: 3rem;
+    width: 3rem;
+}
+
+.editor-row-number.wide .editor-row-number-value {
+    width: 2rem;
+    background-color: var(--colour-2);
+}
+
+@media (prefers-color-scheme: dark) {
+    .editor-row-number-value {
+        background-color: var(--colour-3);
+    }
+    .editor-row-number.wide .editor-row-number-value {
+        background-color: var(--colour-3);
+    }
+}
