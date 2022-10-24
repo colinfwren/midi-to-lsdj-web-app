@@ -11,3 +11,9 @@
     height: 1rem;
     background-color: var(--colour-2);
 }
+
+@media (prefers-color-scheme: dark) {
+    .active-instrument .value {
+        background-color: var(--colour-3);
+    }
+}

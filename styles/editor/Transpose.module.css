@@ -11,3 +11,8 @@
     background-color: var(--colour-2);
 }
 
+@media (prefers-color-scheme: dark) {
+    .transpose .value {
+        background-color: var(--colour-3);
+    }
+}

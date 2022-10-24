@@ -72,3 +72,23 @@
     width: 11rem;
     text-align: center;
 }
+
+
+@media (prefers-color-scheme: dark) {
+    .upload-header {
+        background-color: var(--colour-3);
+    }
+
+    .upload-header.selected {
+        background-color: var(--colour-2);
+    }
+
+    .file-select-wrapper.disabled .submit-button {
+        background-color: var(--colour-2);
+    }
+
+    .loading-screen {
+        background-color: var(--colour-4);
+        border-color: var(--colour-1)
+    }
+}

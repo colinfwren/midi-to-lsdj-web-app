@@ -4,33 +4,57 @@ import Instrument from "./editor/Instrument";
 import Command from "./editor/Command";
 import EditorColumnTitleGroup from "./editor/EditorColumnTitleGroup";
 import EditorColumnTitle from "./editor/EditorColumnTitle";
+import {LSDJNote} from "../types";
+import {convertToHex} from "midi-to-lsdj/dist/utils";
 
-function EditorPhrase({phraseSteps = [], isDrums = false}) {
-  const rowNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-  const notes = rowNumbers.map((rowNumber, rowIndex) => {
-    const step = phraseSteps.length > (rowIndex) ? phraseSteps[rowIndex] : { notes: [], command: '-00' };
-    const notes = isDrums ? [<Note value={step.notes[0]} width={3} />, <Note value={step.notes[1]} />] : <Note value={step.notes[0]} /> ;
+type EditorPhraseProps = {
+  notes: LSDJNote[]
+}
+
+function getRows(notes: LSDJNote[]): LSDJNote[] {
+  if (notes.length === 16) {
+    return notes
+  }
+  const emptyRowCount = 16 - notes.length
+  const emptyRows = Array(emptyRowCount).fill(0).map(() => {
+    return {
+      notes: ['--'],
+      command: '--',
+      triplets: []
+    }
+  })
+  return [...notes, ...emptyRows]
+}
+
+function EditorPhrase({ notes  = []}: EditorPhraseProps) {
+  const rows = getRows(notes)
+  const values = rows.map((note, rowIndex) => {
+    // const notes = isDrums ? [<Note value={step.notes[0]} width={3} />, <Note value={step.notes[1]} />] : <Note value={step.notes[0]} /> ;
+    const rowNumber = convertToHex(rowIndex).charAt(1)
     return (
-      <EditorRow index={rowNumber} key={rowNumber}>
-        {notes}
-        <Instrument instrument="00" width={isDrums ? 3 : 4}/>
-        <Command command={step.command.substr(0, 1)} value={step.command.substr(1, 2)}/>
+      <EditorRow index={rowNumber} key={rowNumber} slim>
+        <Note value={note.notes[0]}  width={3} />
+        <Instrument instrument="00" width={4}/>
+        <Command command={note.command.charAt(0)} value={note.command.substring(1,3)}/>
       </EditorRow>
     );
   });
-  const extraNoteColumn = isDrums ? <EditorColumnTitle title="NOTE" width={3} /> : null;
+  // const extraNoteColumn = isDrums ? <EditorColumnTitle title="NOTE" width={3} /> : null;
   const columns = (
     <EditorColumnTitleGroup key="1">
-      {extraNoteColumn}
-      <EditorColumnTitle title="NOTE" />
-      <EditorColumnTitle title="INSTR" width={isDrums ? 3 : 4} />
-      <EditorColumnTitle title="CMD" width={isDrums ? 3 : 4} />
+      <div />
+      {/*{extraNoteColumn}*/}
+      <EditorColumnTitle title="NOTE" width={3} />
+      <EditorColumnTitle title="INSTR" width={4} />
+      <EditorColumnTitle title="CMD" width={4} />
     </EditorColumnTitleGroup>
   )
-  return [
-    columns,
-    notes
-  ];
+  return (
+    <>
+      {columns}
+      {values}
+    </>
+  )
 }
 
 export default EditorPhrase;

@@ -1,19 +1,16 @@
 import EditorChain from "./EditorChain";
 import Title from "./Title";
-import { convertToHex } from 'midi-to-lsdj/dist/utils';
 import { LSDJChain } from "../types";
 
 type ChainProps = {
-  chain: LSDJChain[],
-  chainIndex: number
+  chain: LSDJChain
 }
 
-function Chain({chain, chainIndex}: ChainProps) {
-  const chainNumber = convertToHex(chainIndex);
+function Chain({chain}: ChainProps) {
   return (
     <div>
-      <Title>CHAIN {chainNumber}</Title>
-      <EditorChain chainPhrases={chain}/>
+      <Title>CHAIN {chain.key}</Title>
+      <EditorChain chainPhrases={chain.phrases}/>
     </div>
   );
 }

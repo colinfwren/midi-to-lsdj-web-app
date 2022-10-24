@@ -20,3 +20,9 @@
 .value {
     width: 3rem;
 }
+
+@media (prefers-color-scheme: dark) {
+    .command {
+        background-color: var(--colour-3);
+    }
+}

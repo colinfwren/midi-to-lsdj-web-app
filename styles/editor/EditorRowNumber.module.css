@@ -19,3 +19,12 @@
     width: 2rem;
     background-color: var(--colour-2);
 }
+
+@media (prefers-color-scheme: dark) {
+    .editor-row-number-value {
+        background-color: var(--colour-3);
+    }
+    .editor-row-number.wide .editor-row-number-value {
+        background-color: var(--colour-3);
+    }
+}

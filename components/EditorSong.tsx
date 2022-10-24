@@ -22,7 +22,7 @@ function getRows(data: LSDJChannels[]): LSDJChannels[] {
 
 function EditorSong({ data, offset}: EditorSongProps) {
   const rows = getRows(data)
-  const notes = rows.map((row, rowIndex) => {
+  const chains = rows.map((row, rowIndex) => {
     const rowNumber = convertToHex((offset * 16) + rowIndex)
     return (
       <EditorRow index={rowNumber} key={rowNumber}>
@@ -45,7 +45,7 @@ function EditorSong({ data, offset}: EditorSongProps) {
   return (
     <>
       {columns}
-      <div className={styles['editor-phrases']} key="1">{notes}</div>
+      <div className={styles['editor-phrases']} key="1">{chains}</div>
     </>
   )
 }

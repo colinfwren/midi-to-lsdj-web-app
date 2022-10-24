@@ -1,14 +1,16 @@
 import EditorPhrase from "./EditorPhrase";
 import Title from "./Title";
-import { convertToHex } from 'midi-to-lsdj/dist/utils';
+import {LSDJPhrase} from "../types";
 
+type PhraseProps = {
+  phrase: LSDJPhrase
+}
 
-function Phrase({phrase, phraseKey, isDrums = false}) {
-  const phraseNumber = convertToHex(phraseKey);
+function Phrase({ phrase }: PhraseProps) {
   return (
     <div>
-      <Title>PHRASE {phraseNumber}</Title>
-      <EditorPhrase phraseSteps={phrase} isDrums={isDrums}/>
+      <Title>PHRASE {phrase.key}</Title>
+      <EditorPhrase notes={phrase.notes}/>
     </div>
   );
 }

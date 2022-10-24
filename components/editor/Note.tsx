@@ -1,10 +1,10 @@
-import '../../styles/editor/Note.module.css';
+import styles from '../../styles/editor/Note.module.css';
 
 function Note({value, width = 4}) {
   if (typeof (value) !== 'string'){
     value = '---';
   }
-  return <div className={`note-${width}`}>{value}</div>
+  return <div className={styles[`note-${width}`]}>{value}</div>
 }
 
 export default Note;

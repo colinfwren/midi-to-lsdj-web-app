@@ -2,6 +2,8 @@ import { useContext } from "react";
 import AppContext from "../contexts/AppContext";
 import { UploadForm } from "../components/UploadForm";
 import SongScreen from "../components/screens/SongScreen";
+import ChainScreen from '../components/screens/ChainScreen'
+import PhraseScreen from "../components/screens/PhraseScreen";
 
 export default function Home() {
   const { data } = useContext(AppContext)
@@ -40,9 +42,11 @@ export default function Home() {
     <div className="App">
       <section>
         <h1>Phrases</h1>
+        <PhraseScreen data={data} />
       </section>
       <section>
         <h1>Chains</h1>
+        <ChainScreen data={data} />
       </section>
       <section>
         <h1>Song</h1>
