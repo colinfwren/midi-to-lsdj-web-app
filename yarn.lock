@@ -161,6 +161,26 @@
   dependencies:
     tslib "^2.4.0"
 
+"@tonaljs/core@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@tonaljs/core/-/core-4.8.0.tgz#a39669aad7fce825d2c237474b5c32c6a4bbacaf"
+  integrity sha512-4jIqUCrxJHx4eelZiReFDKg42x14iCAUQHiqpLCiCopdhnq+eKbkQc6BdFbWkf/fSltet8QdnJmZOHcE4DaATg==
+
+"@tonaljs/midi@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@tonaljs/midi/-/midi-4.8.0.tgz#bb351cc9d1c6f86b462585919491c5c810de56f1"
+  integrity sha512-5yFLdR5yL4yV2wyeVIWBNAQ70SPvtiJ1QCUlFaC8C3Mmdji/MrqgXWnw+N4XSQ4KP8e2zidO2V+csXwmZvkr9w==
+  dependencies:
+    "@tonaljs/core" "^4.8.0"
+
+"@tonaljs/note@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@tonaljs/note/-/note-4.8.0.tgz#b3d6e351067cf98965d38684abddca43b9843ee0"
+  integrity sha512-xyMD9tAgd2rXG+0U/AXOGb4ODFfC1bLxaFg6Yr5g9fannlikgc+QayFdL9RgjHlbfhM4ioqWDN+9Z6IEnFDDfw==
+  dependencies:
+    "@tonaljs/core" "^4.8.0"
+    "@tonaljs/midi" "^4.8.0"
+
 "@types/formidable@^2.0.5":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@types/formidable/-/formidable-2.0.5.tgz#e54e31d242ef750ac2d05aa163fa0274c8e6ef9c"
@@ -1233,11 +1253,13 @@ midi-file@^1.2.3:
   resolved "https://registry.yarnpkg.com/midi-file/-/midi-file-1.2.3.tgz#020c48c96e96ac39c5c23abd8874065dc9959395"
   integrity sha512-JsOv9cajkVkR1gbL9Jvplz6X4lPuyVfcci0kSLzXZ2WKs7TJF72m9U5rmp45/H/1As+96dXY8xgvNLiIfGOU4w==
 
-midi-to-lsdj@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/midi-to-lsdj/-/midi-to-lsdj-1.0.10.tgz#47bb557c5c18e5c5358353d610ce619b537c4bcf"
-  integrity sha512-bz6r+n7UuZGv8oZYj7lTSw3wTiqibqUxxvkJXIsYu6wKbxG9ZtPR0iZKQOTutKo4o44sY8VxvcNeN3482KQgzA==
+midi-to-lsdj@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/midi-to-lsdj/-/midi-to-lsdj-1.1.0.tgz#bc979657d96b4a3056839f91b9875c936d57b830"
+  integrity sha512-TeoptwvmNSGNSAD5bI56e/DmYWbpdZJcWl0cCgK7RjCZ6j0wzOKbnDawfQnBTn/JCd+9hUOSr+9BiYmnqZaEzg==
   dependencies:
+    "@tonaljs/core" "^4.8.0"
+    "@tonaljs/note" "^4.8.0"
     midi-file "^1.2.3"
     typescript "^4.8.4"
 
