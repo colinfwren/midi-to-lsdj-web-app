@@ -1,6 +1,6 @@
 import EditorSong from "./EditorSong";
 import Title from "./Title";
-import { LSDJChannels} from "../types";
+import { LSDJChannels } from "../types";
 
 type SongProps = {
   data: LSDJChannels[],

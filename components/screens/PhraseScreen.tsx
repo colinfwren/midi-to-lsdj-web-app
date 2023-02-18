@@ -3,20 +3,21 @@ import Editor from "../Editor";
 import Phrase from "../Phrase";
 import SongInfo from "../SongInfo";
 import styles from  "../../styles/section.module.css";
-import {LSDJTrack} from "../../types";
+import {LSDJFile} from "../../types";
 
 type PhraseScreenProps = {
-  data: LSDJTrack
+  data: LSDJFile
 }
 
 export default function PhraseScreen({data}: PhraseScreenProps) {
-  const phrases = data.phrases.map((phrase) => {
+  const { track, project } = data
+  const phrases = track.phrases.map((phrase) => {
     return (
       <Gameboy key={phrase.key}>
         <Editor>
           <Phrase phrase={phrase} />
         </Editor>
-        <SongInfo tempo='120' section="P" />
+        <SongInfo tempo={project.tempo} section="P" />
       </Gameboy>
     );
   });
