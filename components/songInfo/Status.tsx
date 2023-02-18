@@ -4,7 +4,7 @@ import Spacer from "./Spacer";
 import styles from '../../styles/songInfo/Status.module.css'
 
 function Status({tempo}) {
-  const cleanTempo = parseInt(tempo, 10)
+  const cleanTempo = parseInt(tempo, 10).toString()
   return (
     <div className={styles.status}>
       <ActiveInstrument />

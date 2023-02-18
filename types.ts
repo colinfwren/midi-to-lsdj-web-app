@@ -57,7 +57,7 @@ export interface AppContext extends AppState {
 
 export interface LSDJChannels {
     pu1: string
-    pu2: []
-    wav: []
-    noi: []
+    pu2: string[]
+    wav: string[]
+    noi: string[]
 }

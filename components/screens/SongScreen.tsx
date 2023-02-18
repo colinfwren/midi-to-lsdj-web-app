@@ -2,12 +2,18 @@ import Gameboy from "../Gameboy";
 import Editor from "../Editor";
 import Song from "../Song";
 import SongInfo from "../SongInfo";
-import { LSDJFile } from '../../types'
-import { getChunksOfSize } from "midi-to-lsdj/dist/utils";
+import {LSDJChannels, LSDJFile} from '../../types'
 import styles from '../../styles/section.module.css'
 
 type SongScreenProps = {
   data: LSDJFile
+}
+
+export function getChunksOfSize(arr: LSDJChannels[], size: number): LSDJChannels[][] {
+  const noOfChunks = Math.ceil(arr.length / size)
+  return Array(noOfChunks).fill(0).map((_val, index) => {
+    return arr.slice(index * size, index * size + size)
+  })
 }
 
 export default function SongScreen({ data }: SongScreenProps) {
