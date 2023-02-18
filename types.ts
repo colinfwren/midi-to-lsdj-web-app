@@ -46,7 +46,7 @@ export declare type LSDJFile = {
 }
 
 export interface AppState {
-    data: null | LSDJTrack,
+    data: null | LSDJFile,
     isLoading: boolean
 }
 
